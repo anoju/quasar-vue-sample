@@ -7,18 +7,25 @@
         style="width: 200px; height: 200px"
       />
       <hr />
-      {{ shape }}
+      {{ rdoVal }}
       <div class="q-gutter-sm">
-        <ui-radio v-model="shape" val="line">Line</ui-radio>
-        <q-radio v-model="shape" val="rectangle" label="Rectangle" />
-        <q-radio v-model="shape" val="ellipse" label="Ellipse" />
-        <q-radio v-model="shape" val="polygon" label="Polygon" />
+        <ui-radio v-model="rdoVal" val="line" label="Line" />
+        <q-radio v-model="rdoVal" val="rectangle" label="Rectangle" />
+        <q-radio v-model="rdoVal" val="ellipse" label="Ellipse" />
+        <q-radio v-model="rdoVal" val="polygon" label="Polygon" />
       </div>
+
+      <br />
+      <q-select v-model="selVal" :options="selOpts" label="Standard" />
+      <br />
+      <div>마지막 컨텐츠</div>
     </div>
   </q-page>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-const shape = ref('line')
+const rdoVal = ref('line')
+const selVal = ref(null)
+const selOpts = ref(['Google', 'Facebook', 'Twitter', 'Apple', 'Oracle'])
 </script>

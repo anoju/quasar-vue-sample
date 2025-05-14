@@ -55,6 +55,11 @@ export default defineConfig((/* ctx */) => {
 
       // extendViteConf (viteConf) {},
       // viteVuePluginOptions: {},
+      terserOptions: {
+        compress: {
+          drop_console: true, // 프로덕션 빌드시에만 console 제거
+        },
+      },
 
       vitePlugins: [
         [
