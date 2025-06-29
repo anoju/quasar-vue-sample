@@ -18,6 +18,12 @@
       <br />
       <q-select v-model="selVal" :options="selOpts" label="Standard" />
       <br />
+      <br />
+
+      <!-- 방법 1: 자동 변환 (강력한 방법) -->
+      <q-input v-model="inputVal" label="이름" filled />
+      <br />
+      <br />
       <div>마지막 컨텐츠</div>
     </div>
   </q-page>
@@ -28,4 +34,5 @@ import { ref } from 'vue'
 const rdoVal = ref('line')
 const selVal = ref(null)
 const selOpts = ref(['Google', 'Facebook', 'Twitter', 'Apple', 'Oracle'])
+const inputVal = ref(null)
 </script>
