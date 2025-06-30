@@ -13,7 +13,7 @@ export default defineConfig((/* ctx */) => {
     // https://v2.quasar.dev/quasar-cli-vite/boot-files
     boot: [
       'global-components',
-      'label-to-div', // label-to-div.js
+      'qfield-accessibility',  // QField Label → Div 변환 (웹접근성)
     ],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#css
