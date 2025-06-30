@@ -13,7 +13,12 @@ export default defineConfig((/* ctx */) => {
     // https://v2.quasar.dev/quasar-cli-vite/boot-files
     boot: [
       'global-components',
-      'qfield-accessibility',  // QField Label → Div 변환 (웹접근성)
+
+      // 웹접근성 방식 선택 (기능 문제가 있는 경우)
+      // 'quasar-accessibility-minimal',   // 최소한 변경 (추천)
+      // 'quasar-accessibility-nexttick', // nextTick 사용
+      'quasar-accessibility-mixin', // 안전한 방식
+      // 'quasar-accessibility-mixin',     // 기존 방식 (기능 문제 있음)
     ],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#css
